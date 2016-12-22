@@ -15,7 +15,7 @@ FROM gcr.io/stacksmith-images/minideb-buildpack:jessie-r7
 
 MAINTAINER Bitnami <containers@bitnami.com>
 
-ENV STACKSMITH_STACK_ID="djpz4wv" \
+ENV STACKSMITH_STACK_ID="gp67qfa" \
     STACKSMITH_STACK_NAME="Node.js for jaydengorout/base_app" \
     STACKSMITH_STACK_PRIVATE="1"
 
@@ -29,10 +29,11 @@ ENV PATH=/opt/bitnami/node/bin:/opt/bitnami/python/bin:$PATH \
 
 ## STACKSMITH-END: Modifications below this line will be unchanged when regenerating
 
-# ExpressJS template
-COPY . /app
-WORKDIR /app
-
+# Node base template
+#COPY . /app
+#WORKDIR /app
+RUN git clone https://github.com/jaydengorout/base_app.git
+RUN mv base_app app && cd app
 RUN npm install
 
 EXPOSE 3000
