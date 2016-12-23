@@ -29,11 +29,6 @@ ENV PATH=/opt/bitnami/node/bin:/opt/bitnami/python/bin:$PATH \
 
 ## STACKSMITH-END: Modifications below this line will be unchanged when regenerating
 
-# Node base template
-#COPY . /app
-#WORKDIR /app
-RUN git clone https://github.com/jaydengorout/base_app.git
-RUN mv base_app app && cd app
 RUN npm install
 
 EXPOSE 3000
