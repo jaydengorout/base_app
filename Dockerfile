@@ -28,6 +28,7 @@ ENV PATH=/opt/bitnami/node/bin:/opt/bitnami/python/bin:$PATH \
     NODE_PATH=/opt/bitnami/node/lib/node_modules
 
 ## STACKSMITH-END: Modifications below this line will be unchanged when regenerating
+WORKDIR ./app
 
 RUN npm install
 
