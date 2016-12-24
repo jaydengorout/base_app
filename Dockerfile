@@ -13,8 +13,8 @@
 
 FROM bitnami/node
 
-RUN git clone -b dev-master https://github.com/jaydengorout/base_app.git /tmp/app &&
-    mv /tmp/app/src/* /app &&
+RUN git clone -b dev-master https://github.com/jaydengorout/base_app.git /tmp/app && \
+    mv /tmp/app/src/* /app && \
     npm install
 
 EXPOSE 3000
