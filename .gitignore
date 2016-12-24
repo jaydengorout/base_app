@@ -15,8 +15,8 @@ jspm_packages
 .npm
 .node_repl_history
 /Base_app/nbproject/private/
-/app/nbproject/private/
+/src/nbproject/private/
 /nbproject/private/
 /.idea/
-/app/node_modules/
+/src/node_modules/
 .idea
